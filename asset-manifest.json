@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Kodix_test/static/css/main.87205bfc.chunk.css",
+    "main.js": "/Kodix_test/static/js/main.aa7fc24e.chunk.js",
+    "main.js.map": "/Kodix_test/static/js/main.aa7fc24e.chunk.js.map",
+    "runtime-main.js": "/Kodix_test/static/js/runtime-main.d65863a0.js",
+    "runtime-main.js.map": "/Kodix_test/static/js/runtime-main.d65863a0.js.map",
+    "static/js/2.43b99c71.chunk.js": "/Kodix_test/static/js/2.43b99c71.chunk.js",
+    "static/js/2.43b99c71.chunk.js.map": "/Kodix_test/static/js/2.43b99c71.chunk.js.map",
+    "index.html": "/Kodix_test/index.html",
+    "static/css/main.87205bfc.chunk.css.map": "/Kodix_test/static/css/main.87205bfc.chunk.css.map",
+    "static/js/2.43b99c71.chunk.js.LICENSE.txt": "/Kodix_test/static/js/2.43b99c71.chunk.js.LICENSE.txt",
+    "static/media/App.sass": "/Kodix_test/static/media/LabGrotesque-Regular.94300414.woff2",
+    "static/media/yearsCheckbox.sass": "/Kodix_test/static/media/check.62a8ceae.svg",
+    "static/media/close.beb7d290.svg": "/Kodix_test/static/media/close.beb7d290.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d65863a0.js",
+    "static/js/2.43b99c71.chunk.js",
+    "static/css/main.87205bfc.chunk.css",
+    "static/js/main.aa7fc24e.chunk.js"
+  ]
+}
