@@ -7,17 +7,23 @@
     flex-direction: column
     color: #000000
     position: relative
+    @media screen and (min-width: 320px) and (max-width: 450px)
+        padding: 32px 16px
     .form__title
         font-family: 'LabGrotesque-Regular', sans-serif
         font-style: normal
         font-size: 28px
         line-height: 40px
+        @media screen and (min-width: 320px) and (max-width: 450px)
+            font-size: 18px
     .form__descr
         font-family: 'LabGrotesque-Regular', sans-serif
         font-size: 14px
         line-height: 24px
         color: #808080
         margin: 16px 0 0
+        @media screen and (min-width: 320px) and (max-width: 450px)
+            font-size: 12px
     .close
         width: 18px
         height: 18px
@@ -30,6 +36,9 @@
         background-color: transparent
         outline: none
         cursor: pointer
+        @media screen and (min-width: 320px) and (max-width: 450px)
+            top: 22px
+            right: 22px
         img
             max-width: 100%
     .form
@@ -51,6 +60,14 @@
             border: 1px solid #DFE3E6
             box-sizing: border-box
             border-radius: 3px
+            &:hover
+                border: 1px solid #000000
+        .errorMessage
+            font-family: 'LabGrotesque-Regular', sans-serif
+            font-size: 10px
+            line-height: 12px
+            margin-top: 4px
+            color: #EA0029
         .payment
             font-weight: 500
             line-height: 24px
@@ -63,10 +80,18 @@
             margin-top: 8px
             padding: 0
             cursor: pointer
+            &:hover
+                color: #F53A31
+            &:active
+                color: #EA0029
         .radioWrapper
             display: flex
             align-items: center
             margin-top: 24px
+            @media screen and (min-width: 320px) and (max-width: 450px)
+                flex-wrap: wrap
+                .label
+                    flex-basis: 100%
             .label
                 margin-top: 0
             .radio
@@ -83,17 +108,23 @@
                 font-weight: normal
                 font-size: 14px
                 line-height: 24px
-                color: #000000;
+                color: #000000
                 border-radius: 50px
-                background: #EEF0F2;
+                background: #EEF0F2
             .radio:checked + label
-                color: #FFFFFF;
+                color: #FFFFFF
                 background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56
             .radioLabel--payment
                 margin-left: auto
+                @media screen and (min-width: 320px) and (max-width: 450px)
+                    margin-left: 0
+                    margin-top: 24px
             .radioLabel--term
                 margin-left: 16px
                 margin-right: 55px
+                @media screen and (min-width: 320px) and (max-width: 450px)
+                    margin-left: 8px
+                    margin-top: 24px
 
         .add
             font-family: 'LabGrotesque-Regular', sans-serif

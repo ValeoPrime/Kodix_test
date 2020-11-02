@@ -26,8 +26,10 @@ const DebitForm = (props) => {
             props.salaryHandler(e)
           }}
         />
+        <span className="errorMessage">{props.errorMessage}</span>
+
         <button className="payment"
-        onClick={props.calculatePayments}>Рассчитать</button>
+        onClick={(e) => {props.calculatePayments(e)}}>Рассчитать</button>
 
         { props.inputArr.length > 0 ?  <YearsCheckbox inputArr = {props.inputArr} /> : null}
         

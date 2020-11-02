@@ -5,7 +5,8 @@ import DebitForm from "./components/debitForm/DebitForm";
 
 function App() {
   const [buttonPress, setButtonPress] = useState(false);
-  const [salary, setSelary] = useState(0);
+  const [salary, setSalary] = useState(0);
+  const [errorMessage, setErrorMessage] = useState('');
   const [inputArr, seInputArr] = useState([]);
   const [appStyles, setAppStyles] = useState(["App", "gradient"]);
 
@@ -19,11 +20,19 @@ function App() {
     setAppStyles(["App", "gradient"]);
   }
 
-  function salaryHandler(e) {
-    setSelary(+e.target.value);
+  function salaryHandler(e) {  
+    setErrorMessage('')
+    setSalary(+e.target.value);
   }
 
-  function calculatePayments() {
+  function calculatePayments(e) {
+    e.preventDefault()
+    if(salary <= 0) {
+      setErrorMessage('Поле обязательно для заполнения')
+      seInputArr([])
+      return
+    }
+
     const deductionYear = salary * 12 * 0.13;
     const years = Math.ceil(260000 / deductionYear)
     const finallArr = [];
@@ -31,7 +40,7 @@ function App() {
     
     for (let i = years; i > 0; i--) {
       maxSum = maxSum - deductionYear
-      maxSum > 0 ? finallArr.push(deductionYear) : finallArr.push(maxSum + deductionYear)
+      maxSum > 0 ? finallArr.push(Math.floor(deductionYear * 100) / 100) : finallArr.push(Math.floor((maxSum + deductionYear) * 100) / 100)
     }
     seInputArr(finallArr)
   }
@@ -44,6 +53,7 @@ function App() {
           salaryHandler={salaryHandler}
           calculatePayments={calculatePayments}
           inputArr={inputArr}
+          errorMessage={errorMessage}
         />
       ) : (
         <Button click={buttonHandler}>Налоговый вычет</Button>
